@@ -1,0 +1,48 @@
+.about-page {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.profile-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 10px var(--accent-glow);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.profile-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text);
+}
