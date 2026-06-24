@@ -15,7 +15,7 @@ order: 4
 
       <div class="bio">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          I am a third-year IT Engineering student at TAMK (Tampere University of applied sciences), specialising in data networks and telecommunications, with a hint of cybersecurity.
         </p>
 
         <p>
