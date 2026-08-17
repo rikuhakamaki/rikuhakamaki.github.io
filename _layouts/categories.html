@@ -1,0 +1,140 @@
+---
+layout: page
+# Technical content directory grouped by Chirpy's category hierarchy.
+---
+
+{% include lang.html %}
+
+{% assign category_label = site.data.locales[lang].categories.category_measure %}
+{% assign post_label = site.data.locales[lang].categories.post_measure %}
+{% assign sorted_categories = site.categories | sort %}
+{% assign category_total = site.categories | size %}
+{% assign post_total = site.posts | size %}
+{% assign rendered_groups = 0 %}
+
+<div class="categories-page">
+  <p class="categories-page__intro">
+    Browse projects, technical write-ups, labs, and notes by subject area.
+  </p>
+
+  <p class="categories-page__summary" aria-label="Category summary">
+    <span>{{ category_total }}</span>
+    {% if category_total == 1 %}
+      {{ category_label.singular | default: category_label }}
+    {% else %}
+      {{ category_label.plural | default: category_label }}
+    {% endif %}
+    <span aria-hidden="true">&middot;</span>
+    <span>{{ post_total }}</span>
+    {% if post_total == 1 %}
+      {{ post_label.singular | default: post_label }}
+    {% else %}
+      {{ post_label.plural | default: post_label }}
+    {% endif %}
+  </p>
+
+  {% if category_total > 0 %}
+    <section class="categories-page__directory" aria-label="Categories directory">
+      {% for category in sorted_categories %}
+        {% assign category_name = category | first %}
+        {% assign posts_of_category = category | last %}
+        {% assign is_parent = false %}
+
+        {% for post in posts_of_category %}
+          {% if post.categories[0] == category_name %}
+            {% assign is_parent = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if is_parent %}
+          {% assign sub_categories = '' | split: '' %}
+
+          {% for post in posts_of_category %}
+            {% if post.categories[0] == category_name %}
+              {% assign second_category = post.categories[1] %}
+              {% if second_category %}
+                {% unless sub_categories contains second_category %}
+                  {% assign sub_categories = sub_categories | push: second_category %}
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign sub_categories = sub_categories | sort %}
+          {% assign sub_categories_size = sub_categories | size %}
+          {% assign posts_size = site.categories[category_name] | size %}
+          {% capture category_url %}/categories/{{ category_name | slugify | url_encode }}/{% endcapture %}
+
+          <section class="category-group" aria-labelledby="category-{{ category_name | slugify }}">
+            <div class="category-group__header">
+              <div class="category-group__title">
+                <i class="far fa-folder{% if sub_categories_size > 0 %}-open{% endif %}" aria-hidden="true"></i>
+                <h2 id="category-{{ category_name | slugify }}">
+                  <a href="{{ category_url | relative_url }}">{{ category_name }}</a>
+                </h2>
+              </div>
+
+              <p class="category-group__meta">
+                <span>{{ posts_size }}</span>
+                {% if posts_size == 1 %}
+                  {{ post_label.singular | default: post_label }}
+                {% else %}
+                  {{ post_label.plural | default: post_label }}
+                {% endif %}
+
+                {% if sub_categories_size > 0 %}
+                  <span aria-hidden="true">&middot;</span>
+                  <span>{{ sub_categories_size }}</span>
+                  {% if sub_categories_size == 1 %}
+                    {{ category_label.singular | default: category_label }}
+                  {% else %}
+                    {{ category_label.plural | default: category_label }}
+                  {% endif %}
+                {% endif %}
+              </p>
+            </div>
+
+            {% if sub_categories_size > 0 %}
+              <ul class="category-children" aria-label="{{ category_name }} subcategories">
+                {% for sub_category in sub_categories %}
+                  {% assign child_posts_size = site.categories[sub_category] | size %}
+                  {% capture sub_category_url %}/categories/{{ sub_category | slugify | url_encode }}/{% endcapture %}
+
+                  <li class="category-child">
+                    <a href="{{ sub_category_url | relative_url }}" class="category-child__link">
+                      <span class="category-child__name">
+                        <i class="far fa-folder" aria-hidden="true"></i>
+                        {{ sub_category }}
+                      </span>
+                      <span class="category-child__count">
+                        {{ child_posts_size }}
+                        {% if child_posts_size == 1 %}
+                          {{ post_label.singular | default: post_label }}
+                        {% else %}
+                          {{ post_label.plural | default: post_label }}
+                        {% endif %}
+                      </span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </section>
+
+          {% assign rendered_groups = rendered_groups | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    {% if rendered_groups == 0 %}
+      <p class="categories-page__empty">
+        Categories exist, but no post currently defines a top-level category in Chirpy's expected front matter order.
+      </p>
+    {% endif %}
+  {% else %}
+    <p class="categories-page__empty">
+      No categories are available yet. Add posts with category front matter and this directory will populate automatically.
+    </p>
+  {% endif %}
+</div>

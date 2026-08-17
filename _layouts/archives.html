@@ -1,0 +1,89 @@
+---
+layout: page
+# Compact chronological index of published posts.
+---
+
+{% include lang.html %}
+
+{% assign posts = site.posts %}
+{% assign post_total = posts | size %}
+{% assign archive_years = '' | split: '' %}
+
+{% for post in posts %}
+  {% assign post_year = post.date | date: '%Y' %}
+  {% unless archive_years contains post_year %}
+    {% assign archive_years = archive_years | push: post_year %}
+  {% endunless %}
+{% endfor %}
+
+<div class="archives-page">
+  <p class="archives-page__intro">
+    A chronological index of projects, technical write-ups, labs, and notes.
+  </p>
+
+  <p class="archives-page__summary" aria-label="Archive summary">
+    <span>{{ post_total }}</span>
+    {% if post_total == 1 %}
+      published post
+    {% else %}
+      published posts
+    {% endif %}
+  </p>
+
+  {% if archive_years.size > 3 %}
+    <nav class="archives-page__years" aria-label="Archive years">
+      {% for year in archive_years %}
+        <a href="#year-{{ year }}">{{ year }}</a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+  {% if post_total > 0 %}
+    <div class="archives-page__timeline">
+      {% for year in archive_years %}
+        {% assign year_post_count = 0 %}
+
+        {% for post in posts %}
+          {% assign post_year = post.date | date: '%Y' %}
+          {% if post_year == year %}
+            {% assign year_post_count = year_post_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+
+        <section class="archive-year" id="year-{{ year }}" aria-labelledby="archive-year-{{ year }}">
+          <header class="archive-year__header">
+            <h2 id="archive-year-{{ year }}">{{ year }}</h2>
+            <p>
+              {{ year_post_count }}
+              {% if year_post_count == 1 %}
+                post
+              {% else %}
+                posts
+              {% endif %}
+            </p>
+          </header>
+
+          <ul class="archive-list">
+            {% for post in posts %}
+              {% assign post_year = post.date | date: '%Y' %}
+              {% if post_year == year %}
+                <li class="archive-entry">
+                  <time class="archive-entry__date" datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: '%d %b' }}
+                  </time>
+                  <a class="archive-entry__title" href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="archives-page__empty">
+      No published posts are available yet. Add posts to the Jekyll post collection and this archive will populate automatically.
+    </p>
+  {% endif %}
+</div>

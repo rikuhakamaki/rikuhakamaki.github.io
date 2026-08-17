@@ -1,0 +1,88 @@
+.content h1 > a.anchor,
+.content h2 > a.anchor,
+.content h3 > a.anchor,
+.content h4 > a.anchor,
+.content h5 > a.anchor,
+.content h6 > a.anchor {
+  display: none;
+}
+
+.case-score {
+  display: inline-block;
+  margin: 0.15rem 0 2.1rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid color-mix(in srgb, var(--link-color) 30%, var(--main-border-color));
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--link-color) 16%, var(--card-bg));
+  color: var(--heading-color);
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.case-score strong {
+  color: var(--link-color);
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.case-evidence-box {
+  margin: 0 0 2rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--card-bg) 92%, var(--text-color) 5%);
+}
+
+.case-evidence-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.case-evidence-box ul {
+  margin-bottom: 0;
+}
+
+.case-evidence-box code {
+  color: var(--link-color);
+}
+
+.pdf-report {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.5rem;
+  background: var(--card-bg);
+}
+
+.pdf-report iframe {
+  display: block;
+  width: 100%;
+  height: min(82vh, 860px);
+  min-height: 680px;
+  border: 0;
+}
+
+.pdf-report-link {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 576px) {
+  .case-score {
+    display: block;
+    width: fit-content;
+    margin-bottom: 1.6rem;
+  }
+
+  .case-evidence-box {
+    padding: 1.1rem 1rem;
+  }
+
+  .pdf-report iframe {
+    height: 76vh;
+    min-height: 500px;
+  }
+}

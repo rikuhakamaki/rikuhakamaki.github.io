@@ -1,0 +1,15 @@
+{% if page.layout == 'categories' %}
+  <link rel="stylesheet" href="{{ '/assets/css/categories.css' | relative_url }}">
+{% endif %}
+
+{% if page.layout == 'tags' %}
+  <link rel="stylesheet" href="{{ '/assets/css/tags.css' | relative_url }}">
+{% endif %}
+
+{% if page.layout == 'archives' %}
+  <link rel="stylesheet" href="{{ '/assets/css/archives.css' | relative_url }}">
+{% endif %}
+
+{% if page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+{% endif %}

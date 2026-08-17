@@ -1,0 +1,66 @@
+---
+layout: page
+# Portfolio tag index generated from Jekyll's post taxonomy.
+---
+
+{% include lang.html %}
+
+{% assign tag_names = '' | split: '' %}
+{% for tag in site.tags %}
+  {% assign tag_names = tag_names | push: tag[0] %}
+{% endfor %}
+
+{% assign tag_total = tag_names | size %}
+{% assign post_total = site.posts | size %}
+
+{% assign sortable_tags = '' | split: '' %}
+{% for tag_name in tag_names %}
+  {% assign sortable_key = tag_name | downcase | append: '::' | append: tag_name %}
+  {% assign sortable_tags = sortable_tags | push: sortable_key %}
+{% endfor %}
+{% assign sorted_tags = sortable_tags | sort_natural %}
+
+<div class="tags-page">
+  <p class="tags-page__intro">
+    Browse projects and technical articles by technology, protocol, tool, or topic.
+  </p>
+
+  <p class="tags-page__summary" aria-label="Tag summary">
+    <span>{{ tag_total }}</span>
+    {% if tag_total == 1 %}
+      tag
+    {% else %}
+      tags
+    {% endif %}
+    <span aria-hidden="true">&middot;</span>
+    <span>{{ post_total }}</span>
+    {% if post_total == 1 %}
+      post
+    {% else %}
+      posts
+    {% endif %}
+  </p>
+
+  {% if tag_total > 0 %}
+    <div class="tags-page__index" aria-label="Tags index">
+      {% for sortable_tag in sorted_tags %}
+        {% assign tag_name = sortable_tag | split: '::' | last %}
+        {% assign post_count = site.tags[tag_name] | size %}
+
+        <a
+          class="tags-page__item"
+          href="{{ tag_name | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}"
+        >
+          <span class="tags-page__name">{{ tag_name }}</span>
+          <span class="tags-page__count" aria-label="{{ post_count }} {% if post_count == 1 %}post{% else %}posts{% endif %}">
+            {{ post_count }}
+          </span>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="tags-page__empty">
+      No tags are available yet. Add posts with tag front matter and this index will populate automatically.
+    </p>
+  {% endif %}
+</div>
