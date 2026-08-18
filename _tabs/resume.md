@@ -42,6 +42,7 @@ degree_ects: 206
         </div>
         <p class="resume-project-meta">University and lab project &middot; <span class="is-completed">Completed</span></p>
         <p>Designed and tested a Cisco-based enterprise network using Cisco CML and physical lab equipment, covering multi-site routing, redundant switching, WAN connectivity, services, and documentation.</p>
+        <p>Documentation coming soon!</p>
       </article>
 
       <article class="resume-project">
@@ -50,15 +51,16 @@ degree_ects: 206
         </div>
         <p class="resume-project-meta">2026 internship lab work &middot; <span class="is-ongoing">Ongoing</span></p>
         <p>Built and maintained a Windows infrastructure lab with directory services, policy management, update services, core network services, file shares, and client machines.</p>
+        <p>Documentation coming soon!</p>
       </article>
 
-      <article class="resume-project">
+      <a class="resume-project resume-project-link" href="{{ '/categories/cyberops/' | relative_url }}" aria-label="View CyberOps Associate Investigation Case Studies documentation">
         <div class="resume-entry-heading">
-          <h3>Network Visibility and Security Monitoring Labs</h3>
+          <h3>CyberOps Associate Investigation Case Studies</h3>
         </div>
-        <p class="resume-project-meta">Ongoing study and homelab &middot; <span class="is-ongoing">Ongoing</span></p>
-        <p>Practiced defensive security fundamentals through segmentation, traffic analysis, DNS filtering, logging, monitoring, access control, and technical documentation.</p>
-      </article>
+        <p class="resume-project-meta">Ongoing study and homelab &middot; <span class="is-completed">Completed</span></p>
+        <p>Analyzed simulated security incidents using network traffic and packet captures to identify attacks, trace malicious activity, determine impact, and document findings.</p>
+      </a>
     </div>
 
   </section>
@@ -128,7 +130,7 @@ degree_ects: 206
             <span>2023&ndash;present</span>
           </div>
           <p class="resume-meta">Tampere University of Applied Sciences</p>
-          <p>Specializing in telecommunications and computer networks, with a growing focus on cybersecurity, network management, cloud services, and network documentation.</p>
+          <p>Specializing in telecommunications and networks, with a growing focus on cybersecurity, network management, cloud services, and network documentation.</p>
           <p class="resume-detail-line">Expected graduation: 2027</p>
           <div class="resume-progress" aria-label="Degree progress: {{ page.degree_ects }} of {{ degree_total_ects }} ECTS, {{ degree_percent }} percent complete">
             <div class="resume-progress-meta">

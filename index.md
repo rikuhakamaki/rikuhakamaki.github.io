@@ -18,7 +18,7 @@ degree_total_ects: 240
     <div class="home-hero-content">
       <h1 id="home-title">Riku Hakam&auml;ki</h1>
       <p class="home-title">ICT Engineering Student &middot; Networks &amp; Cybersecurity</p>
-      <p class="home-summary">Final-stage ICT engineering student at Tampere University of Applied Sciences, specializing in Telecommunication and Networks. I&rsquo;m particularly interested in network infrastructure, cybersecurity, and understanding how real systems are designed, operated, and defended.</p>
+      <p class="home-summary">Final-stage ICT engineering student at Tampere University of Applied Sciences, specializing in Telecommunication and Networks. I&rsquo;m particularly interested in network infrastructure, cybersecurity, cloud technologies, and understanding how real systems are designed, operated, and defended.</p>
       <a class="home-text-link home-hero-link" href="{{ '/resume/' | relative_url }}">View Resume</a>
     </div>
 
@@ -52,9 +52,9 @@ degree_total_ects: 240
       </article>
 
       <article class="home-project-card">
-        <h3>Network Visibility and Security Monitoring Labs</h3>
-        <p>Explored defensive security fundamentals through segmentation, traffic analysis, DNS filtering, logging and monitoring tools.</p>
-        <p class="home-project-note">Documentation coming soon</p>
+        <h3>CyberOps Security Investigation Case Studies</h3>
+        <p>Analyzed simulated security incidents using network traffic and packet captures to identify attacks, trace malicious activity, determine impact, and document findings.</p>
+        <a class="home-text-link home-project-link" href="{{ '/categories/cyberops/' | relative_url }}">View documentation</a>
       </article>
 
       <article class="home-project-card">
@@ -123,7 +123,7 @@ degree_total_ects: 240
   <section class="home-final-cta" aria-labelledby="thesis-opportunity">
     <div class="home-final-cta-copy">
       <h2 id="thesis-opportunity">Get in touch</h2>
-      <p>Interested in thesis opportunities related to networking, infrastructure and cybersecurity.</p>
+      <p>Interested in thesis opportunities related to networks, infrastructure, cybersecurity and cloud technologies.</p>
     </div>
     <a class="home-text-link" href="https://www.linkedin.com/in/riku-hakam%C3%A4ki-036006203/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </section>

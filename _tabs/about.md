@@ -33,7 +33,7 @@ profile_location: Tampere, Finland
       <p class="about-subtitle">{{ profile_role }}</p>
       <p class="about-status">{{ profile_location }}</p>
 
-      <p>I am an Information Technology engineering student at Tampere University of Applied Sciences, specializing in telecommunications and computer networks. My professional direction sits around practical infrastructure: networks, systems, documentation, and the security visibility needed to understand what those systems are doing.</p>
+      <p>I am an Information Technology engineering student at Tampere University of Applied Sciences, specializing in telecommunication and networks. My professional direction sits around practical infrastructure: networks, systems, documentation, and the security visibility needed to understand what those systems are doing.</p>
     </div>
   </header>
 
@@ -44,7 +44,7 @@ profile_location: Tampere, Finland
 
     <div class="about-focus-grid">
       <article class="about-focus-card">
-        <h3>Networks and Telecommunications</h3>
+        <h3>Networks</h3>
         <p>Routing, switching, redundancy, IPv4/IPv6 design, network services, and practical lab infrastructure.</p>
       </article>
 
@@ -102,7 +102,7 @@ profile_location: Tampere, Finland
     <div class="about-contact-card">
       <div class="about-contact-copy">
         <h2 id="about-contact-title">Connect With Me!</h2>
-        <p>For thesis opportunities, networking, infrastructure, or cybersecurity-related work, the configured portfolio links below are the best ways to reach me.</p>
+        <p>For thesis thesis opportunities, network, cybersecurity, or cloud technologies-related work, click here to connect with me!</p>
       </div>
 
       <div class="about-contact-links" aria-label="Contact links">

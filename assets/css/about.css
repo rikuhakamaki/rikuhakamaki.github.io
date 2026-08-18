@@ -72,8 +72,7 @@
   grid-template-columns: minmax(136px, 172px) minmax(0, 1fr);
   gap: clamp(1.2rem, 4vw, 2.35rem);
   align-items: start;
-  padding: 0.2rem 0 2.35rem;
-  border-bottom: 1px solid var(--about-border);
+  padding: 0.2rem 0 0.85rem;
 }
 
 .about-profile-image {
@@ -170,7 +169,7 @@
 }
 
 .about-section {
-  margin-top: 2.45rem;
+  margin-top: 1.45rem;
 }
 
 .about-section-heading {
@@ -352,7 +351,7 @@
   .about-hero {
     grid-template-columns: 1fr;
     gap: 1.1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.85rem;
   }
 
   .about-profile-image {

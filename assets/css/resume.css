@@ -187,6 +187,18 @@
   transition: border-color 160ms ease;
 }
 
+.resume-project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.resume-project-link:hover,
+.resume-project-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
 .resume-section[aria-labelledby="experience"] .resume-entry {
   transition: border-color 160ms ease;
 }
