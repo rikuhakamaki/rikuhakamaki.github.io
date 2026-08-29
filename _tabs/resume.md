@@ -26,7 +26,7 @@ degree_ects: 206
     </div>
     <a class="resume-download-button" href="{{ '/assets/files/RikuHakam%C3%A4ki_resume_eng_08-2026.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
       <i class="fas fa-download" aria-hidden="true"></i>
-      <span>Download CV</span>
+      <span>View my resume</span>
     </a>
   </section>
 
