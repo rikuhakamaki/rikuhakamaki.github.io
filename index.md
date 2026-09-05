@@ -54,7 +54,7 @@ degree_total_ects: 240
       <article class="home-project-card">
         <h3>CyberOps Security Investigation Case Studies</h3>
         <p>Analyzed simulated security incidents using network traffic and packet captures to identify attacks, trace malicious activity, determine impact, and document findings.</p>
-        <a class="home-text-link home-project-link" href="{{ '/categories/cyberops/' | relative_url }}">View documentation</a>
+        <a class="home-text-link home-project-link" href="{{ '/categories/cyberops-associate/' | relative_url }}">View documentation</a>
       </article>
 
       <article class="home-project-card">

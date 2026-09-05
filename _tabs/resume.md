@@ -54,7 +54,7 @@ degree_ects: 206
         <p>Documentation coming soon!</p>
       </article>
 
-      <a class="resume-project resume-project-link" href="{{ '/categories/cyberops/' | relative_url }}" aria-label="View CyberOps Associate Investigation Case Studies documentation">
+      <a class="resume-project resume-project-link" href="{{ '/categories/cyberops-associate/' | relative_url }}" aria-label="View CyberOps Associate Investigation Case Studies documentation">
         <div class="resume-entry-heading">
           <h3>CyberOps Associate Investigation Case Studies</h3>
         </div>
