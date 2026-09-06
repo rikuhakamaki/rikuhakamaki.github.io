@@ -34,12 +34,4 @@ My analysis focused on connecting the alerts and logs with the network traffic t
 
 The full investigation report, including the supporting log and packet-analysis evidence, can be viewed below. The report was originally written in Finnish; this English version is otherwise similar in content.
 
-{% assign case02_report = '/assets/CyberOps/case02_RikuHakamaki_eng.pdf' | relative_url %}
-
-<div class="pdf-report">
-  <iframe src="{{ case02_report }}" title="CyberOps Case 02 investigation report" loading="lazy"></iframe>
-</div>
-
-<p class="pdf-report-link">
-  <a href="{{ case02_report }}" target="_blank" rel="noopener">View PDF directly</a>
-</p>
+{% include pdf-report.html file="/assets/CyberOps/case02_RikuHakamaki_eng.pdf" title="CyberOps Case 02 investigation report" %}

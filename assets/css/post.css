@@ -62,7 +62,7 @@
   display: block;
   width: 100%;
   height: min(82vh, 860px);
-  min-height: 680px;
+  height: min(82svh, 860px);
   border: 0;
 }
 
@@ -83,6 +83,6 @@
 
   .pdf-report iframe {
     height: 76vh;
-    min-height: 500px;
+    height: 76svh;
   }
 }

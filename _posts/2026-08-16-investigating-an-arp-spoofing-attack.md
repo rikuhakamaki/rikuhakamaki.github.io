@@ -32,12 +32,4 @@ The evidence indicated an `ARP spoofing` attack. The Raspberry Pi impersonated P
 
 The full investigation report, including the supporting packet-analysis evidence and final conclusion, can be viewed below. The report was originally written in Finnish; this English version is otherwise similar in content.
 
-{% assign case01_report = '/assets/CyberOps/case01_RikuHakamaki_eng.pdf' | relative_url %}
-
-<div class="pdf-report">
-  <iframe src="{{ case01_report }}" title="CyberOps Case 01 investigation report" loading="lazy"></iframe>
-</div>
-
-<p class="pdf-report-link">
-  <a href="{{ case01_report }}" target="_blank" rel="noopener">View PDF directly</a>
-</p>
+{% include pdf-report.html file="/assets/CyberOps/case01_RikuHakamaki_eng.pdf" title="CyberOps Case 01 investigation report" %}

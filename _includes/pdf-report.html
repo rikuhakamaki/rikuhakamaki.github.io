@@ -1,0 +1,15 @@
+{% assign report_url = include.file | relative_url %}
+{% assign viewer_url = '/assets/pdfjs/6.3.289/web/viewer.html' | relative_url %}
+
+<div class="pdf-report">
+  <iframe
+    src="{{ viewer_url }}?file={{ report_url | url_encode }}#zoom=page-width&amp;pagemode=none"
+    title="{{ include.title | escape }}"
+    loading="lazy"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<p class="pdf-report-link">
+  <a href="{{ report_url }}" target="_blank" rel="noopener">View PDF directly</a>
+</p>
