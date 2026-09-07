@@ -15,6 +15,9 @@ _site
 node_modules
 package-lock.json
 
+# PDF.js distribution downloaded by the Pages workflow
+/assets/pdfjs/6.3.289/
+
 # IDE configurations
 .idea
 .vscode/*

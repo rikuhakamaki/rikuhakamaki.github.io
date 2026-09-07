@@ -14,6 +14,3 @@
 *.png binary
 *.jpg binary
 *.ico binary
-
-# Keep the upstream PDF.js distribution out of the site's source-language stats.
-assets/pdfjs/6.3.289/** linguist-vendored
