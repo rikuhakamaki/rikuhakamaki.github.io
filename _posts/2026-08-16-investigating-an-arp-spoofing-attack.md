@@ -10,6 +10,11 @@ tags:
 description: "CyberOps Case 01 write-up covering ARP spoofing, IP impersonation, and a Man-in-the-Middle attack found in packet evidence."
 ---
 
+<aside class="post-author-note" aria-label="Authorship note">
+  <p class="post-author-note-title">NOTE</p>
+  <p>The text below has been originally written by the author. ChatGPT GPT-5.6 Sol was used to finalize the wording and presentation of the text.</p>
+</aside>
+
 ## Case 01
 
 <p class="case-score"><strong>Score:</strong> 19 / 20</p>
@@ -28,8 +33,12 @@ The investigation focused on IP and MAC address relationships in the capture. Th
 
 The evidence indicated an `ARP spoofing` attack. The Raspberry Pi impersonated Peter's network identity, positioned itself as a `Man-in-the-Middle`, and was able to see the archive-server traffic related to the offer file Peter was viewing. After that activity ended, the Raspberry Pi left the network and Peter's correct MAC address returned to the ARP table.
 
-## Full Investigation Report
+## Investigation Response
 
-The full investigation report, including the supporting packet-analysis evidence and final conclusion, can be viewed below. The report was originally written in Finnish; this English version is otherwise similar in content.
+The final submission was written as a response to the fictional client who had commissioned the investigation. In the scenario, I had been hired by the affected company to investigate the suspected security incident and report back with my findings.
+
+The response summarizes the investigation results, explains what happened based on the packet-analysis evidence, and includes the relevant technical evidence supporting the conclusion. The original submission was written in Finnish; the English version below is otherwise similar in content.
+
+Thank you for the help on this assignment, KK!
 
 {% include pdf-report.html file="/assets/CyberOps/case01_RikuHakamaki_eng.pdf" title="CyberOps Case 01 investigation report" %}

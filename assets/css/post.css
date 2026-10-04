@@ -7,6 +7,40 @@
   display: none;
 }
 
+/* Match Chirpy's unnumbered style for code blocks labelled Shell. */
+.content :is(.language-bash, .language-zsh, .language-ksh, .language-sh, .language-shell) .rouge-gutter {
+  padding: 0 !important;
+  margin-right: 0;
+}
+
+.content :is(.language-bash, .language-zsh, .language-ksh, .language-sh, .language-shell) .lineno {
+  display: none;
+}
+
+.post-author-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #d96b16;
+  border-left-width: 5px;
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, #d96b16 10%, var(--card-bg));
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.post-author-note .post-author-note-title {
+  margin: 0 0 0.75rem;
+  color: #d96b16;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.post-author-note p:last-child {
+  margin-bottom: 0;
+}
+
 .case-score {
   display: inline-block;
   margin: 0.15rem 0 2.1rem;
