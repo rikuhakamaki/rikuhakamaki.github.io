@@ -341,7 +341,7 @@ The deliberately broken DNSSEC domain should not resolve successfully.
 
 ## Configuring Pi-hole
 
-Next, configure Pi-hole. Access the Pi-hole web interface at [http://pi-hole-ip/admin/](http://pi-hole-ip/admin/). 
+Next, configure Pi-hole. Access the Pi-hole web interface at <code class="language-plaintext highlighter-rouge">http://pi-hole-ip/admin/</code>. 
 
   > **NOTE:** Replace <code class="language-plaintext highlighter-rouge">pi-hole-ip</code> with your Raspberry Pi's IP address.
 
