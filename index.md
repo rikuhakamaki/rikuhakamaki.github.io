@@ -60,7 +60,7 @@ degree_total_ects: 240
       <article class="home-project-card">
         <h3>Raspberry Pi DNS Infrastructure</h3>
         <p>Built and maintained a self-hosted DNS stack using Pi-hole and Unbound for network-wide filtering, recursive DNS resolution, and greater control over local network traffic.</p>
-        <p class="home-project-note">Documentation coming soon</p>
+        <a class="home-text-link home-project-link" href="{{ '/posts/pihole-unbound-raspberry-pi-5/' | relative_url }}">View documentation</a>
       </article>
     </div>
   </section>
