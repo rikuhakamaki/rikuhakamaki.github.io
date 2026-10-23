@@ -2,7 +2,7 @@
 title: Resume
 icon: fas fa-file-alt
 order: 5
-degree_ects: 206
+degree_ects: 216
 ---
 <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url }}">
 

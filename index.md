@@ -2,7 +2,7 @@
 layout: home
 title: Home
 permalink: /
-degree_ects: 206
+degree_ects: 216
 degree_total_ects: 240
 ---
 
